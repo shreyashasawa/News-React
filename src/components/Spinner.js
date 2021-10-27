@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-export default function Spinner(){
+export default function Spinner() {
   return (
-    <div className="d-flex justify-content-center" >
-      <div style={{width: '150px',  height: '150px'}}>
-      <div className="loading loading--full-height"></div>
+    <div className="spinner">
+      <div style={{ width: "150px", height: "150px" }}>
+        <div className="loading loading--full-height"></div>
       </div>
     </div>
-  )
+  );
 }
