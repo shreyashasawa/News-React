@@ -57,7 +57,7 @@
 .post-module .post-content {
   position: absolute;
   bottom: 0;
-  background: #ffffff;
+  background: #eeeeee;
   width: 100%;
   padding: 30px;
   -webkti-box-sizing: border-box;
@@ -76,7 +76,7 @@
   left: 0;
   background: #e74c3c;
   padding: 10px 15px;
-  color: #ffffff;
+  color: #eeeeee;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
@@ -105,17 +105,19 @@
 }
 
 .post-module .post-content .post-meta a {
-  color: #EEEEEE;
+  color: #eeeeee;
   text-decoration: none;
   background-color: #000000;
-  padding: 8px;
+  padding: 8px 18px;
+  border-radius: 19px;
 }
 
 .post-module .post-content .post-meta a:hover {
-  color: #EEEEEE;
+  color: #eeeeee;
   text-decoration: none;
-  background-color: #d83b3b;
-  padding: 8px;
+  background-color: #e74c3c;
+  padding: 8px 18px;
+
 }
 
 .hover .post-content .description {
