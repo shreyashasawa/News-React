@@ -1,4 +1,4 @@
-/* ! General */
+/* General */
 *{
   margin: 0;
   padding: 0;
@@ -6,69 +6,49 @@
 }
 
 body{
-  background: #082032;
-  padding: 3em;
+  background: #b4bad2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ! Navbar */
-.navbar {
-  max-width: 500px;
-  background-color: #334756;
-  background-size: 117px 188px;
-  transition: all 0.4s cubic-bezier(0.42, 0, 0.34, 1.01);
-  position: fixed;
-  z-index: 5;
-  right: -100%;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  visibility: hidden;
-  opacity: 0;
-  padding: 3em;
-  display: flex;
+/* Navbar */
+ul {
+  margin: auto auto auto 0;
 }
 
-.navbar.open {
-  visibility: visible;
-  width: 100%;
-  right: 0;
-  opacity: 1;
-}
-ul {
-  margin: auto auto auto auto;
-}
 ul li {
   list-style: none;
-  font-size: 2em;
-  text-align: center;
+  font-size: 1.2em;
+  text-align: justify;
 }
+
 ul li + li {
   margin-top: 1em;
 }
+
 ul li a {
   text-decoration: none;
   font-weight: 600;
-  color: #D4ECDD;
-}
-ul li a:hover {
-  color: #FF4C29;
+  color: #eeeeee;
 }
 
-/* ! Loading */
+ul li a:hover {
+  color: #c94e50;
+}
+
+/* Loading */
 .spinner, .loading {
   display: flex;
   justify-content: center;
-  margin-top: 27px;
+  margin-top: 22px;
 }
 
 .loading::after {
   content: "";
   width: 50px;
   height: 50px;
-  border: 10px solid #dddddd;
-  border-top-color: #009579;
+  border: 10px solid #EEEEEE;
+  border-top-color: #c94e50;
   border-radius: 50%;
   animation: loading 1s ease infinite;
 }
@@ -79,31 +59,78 @@ ul li a:hover {
   }
 }
 
-/* ! News */
+/* News */
 .category-type{
-  margin: 24px 0 12px 0;
   text-align: center;
-  color: #D4ECDD;
+  color: #4e4a46;
   font-size: 2.8rem;
+  padding-top: 13px;
 }
 
-/* ! Hamburger */
-.hamburger-button {
-  outline: none;
-  border: none;
-  cursor: pointer;
-  width: 3em;
-  height: 2em;
-  position: relative;
-  z-index: 10;
-  background-color: transparent;
-  background-image: url(https://res.cloudinary.com/dnpyq0ocz/image/upload/v1588441892/icon-hamburger.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  -webkit-tap-highlight-color: transparent;
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
 }
 
-.hamburger-button.open {
-  background-image: url(https://res.cloudinary.com/dnpyq0ocz/image/upload/v1588441892/icon-hamburger-close.svg);
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #c94e50;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #c94e50;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
 }
