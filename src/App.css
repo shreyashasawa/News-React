@@ -1,10 +1,66 @@
-.category{
-  margin-top: 80px;
+/* ! General */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.loading {
+body{
+  background: #082032;
+  padding: 3em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ! Navbar */
+.navbar {
+  max-width: 500px;
+  background-color: #334756;
+  background-size: 117px 188px;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.34, 1.01);
+  position: fixed;
+  z-index: 5;
+  right: -100%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  padding: 3em;
+  display: flex;
+}
+
+.navbar.open {
+  visibility: visible;
+  width: 100%;
+  right: 0;
+  opacity: 1;
+}
+ul {
+  margin: auto auto auto auto;
+}
+ul li {
+  list-style: none;
+  font-size: 2em;
+  text-align: center;
+}
+ul li + li {
+  margin-top: 1em;
+}
+ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #D4ECDD;
+}
+ul li a:hover {
+  color: #FF4C29;
+}
+
+/* ! Loading */
+.spinner, .loading {
   display: flex;
   justify-content: center;
+  margin-top: 27px;
 }
 
 .loading::after {
@@ -23,3 +79,31 @@
   }
 }
 
+/* ! News */
+.category-type{
+  margin: 24px 0 12px 0;
+  text-align: center;
+  color: #D4ECDD;
+  font-size: 2.8rem;
+}
+
+/* ! Hamburger */
+.hamburger-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 3em;
+  height: 2em;
+  position: relative;
+  z-index: 10;
+  background-color: transparent;
+  background-image: url(https://res.cloudinary.com/dnpyq0ocz/image/upload/v1588441892/icon-hamburger.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hamburger-button.open {
+  background-image: url(https://res.cloudinary.com/dnpyq0ocz/image/upload/v1588441892/icon-hamburger-close.svg);
+}
